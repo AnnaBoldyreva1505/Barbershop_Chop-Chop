@@ -11,6 +11,7 @@
     border-radius: 4px;
     text-decoration: none;
     cursor: pointer;
+    border: none;
   }
   
   .main-link:hover:not(:disabled) {

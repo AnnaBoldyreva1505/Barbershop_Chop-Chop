@@ -59,6 +59,7 @@
 
 .price__item-count{
     white-space: nowrap;
+    
 }
 
 @media (max-width: 768px) {
