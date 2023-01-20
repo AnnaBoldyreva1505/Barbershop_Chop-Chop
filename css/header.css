@@ -9,12 +9,12 @@
  
   }
 
-  .fixed{
+  /* .fixed{
     position: sticky;
     z-index: 999;
     top: 0;
     background: #241D1C;
-  }
+  } */
   
   .header__navigation {
     flex-grow: 1;
