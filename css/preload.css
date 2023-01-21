@@ -7,8 +7,8 @@ min-height: 100px;
 .preload:after {
 content: "";
 position: absolute;
-max-width: 40px;
-max-height: 40px;
+width: 40px;
+height: 40px;
 top: 50%;
 left: 50%;
 border: 12px double #F6F3E3;

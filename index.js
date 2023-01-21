@@ -314,6 +314,7 @@ const initReserve = () => {
     }).format(new Date(`${data.month}/${data.day}`))}, время ${data.time}`;
 
     reserveForm.append(p)
+
   });
 };
 
@@ -324,3 +325,7 @@ const init = () => {
 };
 
 window.addEventListener("DOMContentLoaded", init);
+
+
+
+

@@ -362,13 +362,21 @@
                   </label>
                 </fieldset>
               </fieldset>
-              <button class="reserve__btn main-link" disabled id="btn" name="btn">
+              <button class="reserve__btn main-link" disabled id="btn_modal_window" name="btn">
                 Записаться
               </button>
             </div>
           </form>
         </div>
       </section>
+
+      <div id="my_modal" class="modal">
+        <div class="modal_content">
+          <span class="close_modal_window">×</span>
+          <p class="modal_status">Запись прошла успешно!</p>
+        </div>
+      </div>
+
     </main>
     <footer class="footer">
       <div class="container">
@@ -407,5 +415,6 @@
       </div>
     </footer>
     <script src="index.js"></script>
+    <!-- <script src="modal.js"></script> -->
   </body>
 </html>
