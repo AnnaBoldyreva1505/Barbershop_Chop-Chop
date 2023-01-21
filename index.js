@@ -192,6 +192,18 @@ const renderDay = (wrapper, data, month) => {
   wrapper.append(...labels);
 };
 
+const renderTime = (wrapper, data) => {
+  const labels = data.map((time) => {
+    const label = document.createElement("label");
+    label.classList.add("radio");
+    label.innerHTML = `
+    <input class="radio__input" type="radio" name="time" value="${time}">
+    <span class="radio__label">${time}</span>`;
+    return label;
+  });
+  wrapper.append(...labels);
+};
+
 const initReserve = () => {
   const reserveForm = document.querySelector(".reserve__form");
   const { fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn } =
@@ -242,6 +254,26 @@ const initReserve = () => {
       removePreload(fieldday);
       removeDisabled([fieldday]);
     }
+
+    if (target.name === "day") {
+      addDisabled([fieldtime, btn]);
+      addPreload(fieldtime);
+
+      const response = await fetch(
+        `${API_URL_IMG}/api?spec=${reserveForm.spec.value}&month=${reserveForm.month.value}&day=${target.value}`
+      );
+      const data = await response.json();
+      fieldday.textContent = "";
+
+      renderTime(fieldtime, data);
+      removePreload(fieldtime);
+      removeDisabled([fieldtime]);
+    }
+
+    if (target.name === "time") {
+      addDisabled([btn]);
+    }
+
   });
 };
 
