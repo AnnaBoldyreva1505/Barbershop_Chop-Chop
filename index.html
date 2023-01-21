@@ -204,14 +204,14 @@
           <h2 class="reserve__title">Как записаться к нам</h2>
           <ol class="reserve__list">
             <li class="reserve__item">
-              Выберите услугу, можно выбрать сразу несколько
+              Выберите услугу
             </li>
             <li class="reserve__item">Выберите специалиста</li>
             <li class="reserve__item">Выберите удобный день и время</li>
           </ol>
           <form class="reserve__form">
             <div class="reserve__form-container">
-              <fieldset class="reserve__fieldset reserve__fieldset-service">
+              <fieldset class="reserve__fieldset reserve__fieldset-service" name="fieldservice">
                 <legend class="reserve__legend">Услуга</legend>
                 <label class="radio">
                   <input class="radio__input" type="radio" name="service" />
@@ -362,7 +362,7 @@
                   </label>
                 </fieldset>
               </fieldset>
-              <button class="reserve__btn main-link" disabled id="btn">
+              <button class="reserve__btn main-link" disabled id="btn" name="btn">
                 Записаться
               </button>
             </div>
